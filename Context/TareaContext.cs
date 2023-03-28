@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using proyef.Models;
+using webapi.Models;
 
-namespace proyef.Context;
+namespace webapi.Context;
 
 public class TareaContext : DbContext
 {

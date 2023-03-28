@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace proyef.Models;
+namespace webapi.Models;
 
 // Con fluent APi los decoradores se comentan
 public class Categoria
