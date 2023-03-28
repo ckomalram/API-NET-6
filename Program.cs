@@ -7,11 +7,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Manera #1 de inyeccion de dependencia -- Stateless
+// Manera #1 de inyeccion de dependencia -- usando interfaz (Recomendada por SOLID)
 builder.Services.AddScoped<IHello, HelloService>();
 
 // Manera #2 de inyeccion de dependencia
 // builder.Services.AddSingleton();
+
+// Manera #3 de inyeccion de dependencia utilizando la clase
+// builder.Services.AddScoped<IHello>(p => new HelloService());
 
 
 
