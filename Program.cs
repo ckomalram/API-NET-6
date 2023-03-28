@@ -7,6 +7,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Manera #1 de inyeccion de dependencia -- Stateless
+builder.Services.AddScoped<IHello, HelloService>();
+
+// Manera #2 de inyeccion de dependencia
+// builder.Services.AddSingleton();
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
