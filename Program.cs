@@ -1,3 +1,5 @@
+using webapi.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -9,6 +11,8 @@ builder.Services.AddSwaggerGen();
 
 // Manera #1 de inyeccion de dependencia -- usando interfaz (Recomendada por SOLID)
 builder.Services.AddScoped<IHello, HelloService>();
+builder.Services.AddScoped<ITareaService, TareaService>();
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
 
 // Manera #2 de inyeccion de dependencia
 // builder.Services.AddSingleton();
