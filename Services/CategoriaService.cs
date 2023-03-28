@@ -43,10 +43,12 @@ public class CategoriaService : ICategoriaService
 
         if (categoriaActual != null)
         {
-            context.Remove(id);
+            context.Remove(categoriaActual);
             await context.SaveChangesAsync();
-
+            // return Results.Ok();
         }
+
+        // return Results.NotFound();
     }
 
 

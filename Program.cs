@@ -1,3 +1,4 @@
+using webapi.Context;
 using webapi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+//Configurar EF
+builder.Services.AddSqlServer<TareaContext>(builder.Configuration.GetConnectionString("cnTareas"));
 // Manera #1 de inyeccion de dependencia -- usando interfaz (Recomendada por SOLID)
 builder.Services.AddScoped<IHello, HelloService>();
 builder.Services.AddScoped<ITareaService, TareaService>();

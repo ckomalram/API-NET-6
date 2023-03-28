@@ -46,7 +46,7 @@ public class TareaService : ITareaService
 
         if (tareaActual != null)
         {
-            context.Remove(id);
+            context.Remove(tareaActual);
             await context.SaveChangesAsync();
 
         }
